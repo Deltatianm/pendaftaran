@@ -11,7 +11,9 @@ class Kelas extends CI_Controller {
 
     public function index() {
         $data['kelas'] = $this->Kelas_model->get_kelas();
+        $this->load->view('layout/header');
         $this->load->view('kelas/index', $data);
+        $this->load->view('layout/footer');
     }
 
     public function create() {

@@ -11,11 +11,15 @@ class Jurusan extends CI_Controller {
 
     public function index() {
         $data['jurusan'] = $this->Jurusan_model->get_jurusan();
+        $this->load->view('layout/header');
         $this->load->view('jurusan/index', $data);
+        $this->load->view('layout/footer');
     }
 
     public function create() {
+        $this->load->view('layout/header');
         $this->load->view('jurusan/create');
+        $this->load->view('layout/footer');
     }
 
     public function store() {

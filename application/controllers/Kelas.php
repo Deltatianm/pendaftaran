@@ -17,7 +17,9 @@ class Kelas extends CI_Controller {
     }
 
     public function create() {
+        $this->load->view('layout/header');
         $this->load->view('kelas/create');
+        $this->load->view('layout/footer');
     }
 
     public function store() {
@@ -50,7 +52,9 @@ class Kelas extends CI_Controller {
             show_404();
         }
 
+        $this->load->view('layout/header');
         $this->load->view('kelas/edit', $data);
+        $this->load->view('layout/footer');
     }
 
     public function update() {

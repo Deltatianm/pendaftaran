@@ -11,11 +11,15 @@ class Siswa extends CI_Controller {
 
     public function index() {
         $data['siswa'] = $this->Siswa_model->get_siswa();
+        $this->load->view('layout/header');
         $this->load->view('siswa/index', $data);
+        $this->load->view('layout/footer');
     }
 
     public function create() {
+        $this->load->view('layout/header');
         $this->load->view('siswa/create');
+        $this->load->view('layout/footer');
     }
 
     public function store() {
@@ -50,7 +54,9 @@ class Siswa extends CI_Controller {
             show_404();
         }
 
+        $this->load->view('layout/header');
         $this->load->view('siswa/edit', $data);
+        $this->load->view('layout/footer');
     }
 
     public function update() {

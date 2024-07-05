@@ -68,6 +68,9 @@
                         <h6 class="collapse-header">Data Sekolah</h6>
                         <a class="collapse-item" href="<?php echo base_url('kelas'); ?>">Kelas</a>
                         <a class="collapse-item" href="<?php echo base_url('Jurusan'); ?>">Jurusan</a>
+                        <a class="collapse-item" href="<?php echo base_url('Guru'); ?>">Guru</a>
+                        <a class="collapse-item" href="<?php echo base_url('Admin'); ?>">Admin</a>
+
                     </div>
                 </div>
             </li>
@@ -82,11 +85,9 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Data Siswa:</h6>
+                        <a class="collapse-item" href="<?php echo base_url('siswa'); ?>">Siswa</a>
+                        
                     </div>
                 </div>
             </li>

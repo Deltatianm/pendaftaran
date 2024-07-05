@@ -50,7 +50,9 @@ class Jurusan extends CI_Controller {
             show_404();
         }
 
+        $this->load->view('layout/header');
         $this->load->view('jurusan/edit', $data);
+        $this->load->view('layout/footer');
     }
 
     public function update() {

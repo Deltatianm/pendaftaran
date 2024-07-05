@@ -11,11 +11,15 @@ class Admin extends CI_Controller {
 
     public function index() {
         $data['admin'] = $this->Admin_model->get_admin();
+        $this->load->view('layout/header');
         $this->load->view('admin/index', $data);
+        $this->load->view('layout/footer');
     }
 
     public function create() {
+        $this->load->view('layout/header');
         $this->load->view('admin/create');
+        $this->load->view('layout/footer');
     }
 
     public function store() {
@@ -50,7 +54,9 @@ class Admin extends CI_Controller {
             show_404();
         }
 
+        $this->load->view('layout/header');
         $this->load->view('admin/edit', $data);
+        $this->load->view('layout/footer');
     }
 
     public function update() {

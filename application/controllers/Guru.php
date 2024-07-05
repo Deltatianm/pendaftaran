@@ -11,11 +11,15 @@ class Guru extends CI_Controller {
 
     public function index() {
         $data['guru'] = $this->Guru_model->get_guru();
+        $this->load->view('layout/header'); 
         $this->load->view('guru/index', $data);
+        $this->load->view('layout/footer');
     }
 
     public function create() {
+        $this->load->view('layout/header');
         $this->load->view('guru/create');
+        $this->load->view('layout/footer');
     }
 
     public function store() {
@@ -49,8 +53,9 @@ class Guru extends CI_Controller {
         if (empty($data['guru'])) {
             show_404();
         }
-
+        $this->load->view('layout/header');
         $this->load->view('guru/edit', $data);
+        $this->load->view('layout/footer');
     }
 
     public function update() {
